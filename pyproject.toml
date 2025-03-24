@@ -6,8 +6,15 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "flask>=3.1.0",
+    "pydantic>=2.10.6",
+    "pyyaml>=6.0.2",
     "wcferry>=39.4.2.2",
 ]
 
 [tool.uv]
 index-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+package = true
+
+[project.scripts]
+wechat-agent = "wechat_agent:main"
+wcferry-mcp-server = "wcferry_mcp_server:main"
