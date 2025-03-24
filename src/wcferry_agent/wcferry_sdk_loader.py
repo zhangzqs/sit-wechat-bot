@@ -1,6 +1,7 @@
 import os
 import ctypes
 from typing import Optional, NoReturn
+import logging
 
 
 class WcferryError(Exception):
@@ -36,6 +37,7 @@ class WcferrySDKLoader:
     def __enter__(self):
         if self._sdk.WxInitSDK(self._debug, self._port) != 0:
             raise WcferryError("SDK初始化失败，请检查调试模式和端口配置")
+        logging.info("wcferry sdk初始化成功")
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb) -> None:
@@ -53,7 +55,7 @@ class WcferrySDKLoader:
         result = self._sdk.WxDestroySDK()
         self._sdk = None
         if result != 0:
-            print("警告：SDK资源释放异常")
+            logging.error(f"Wcferry SDK资源释放异常，状态码：{result}")
 
     @property
     def sdk(self) -> ctypes.CDLL:

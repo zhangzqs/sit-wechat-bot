@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "flask>=3.1.0",
     "pydantic>=2.10.6",
+    "python-json-logger>=3.3.0",
     "pyyaml>=6.0.2",
     "wcferry>=39.4.2.2",
 ]
@@ -16,5 +17,6 @@ index-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 package = true
 
 [project.scripts]
-wechat-agent = "wechat_agent:main"
+wcferry-agent = "wcferry_agent:main"
 wcferry-mcp-server = "wcferry_mcp_server:main"
+wcferry-message-handler = "wcferry_message_handler:main"

@@ -1,2 +1,8 @@
+logger:
+  level: DEBUG
+  filename: "logs/agent.log"
+
 wcferry:
-  sdk_path: 'wcfsdk/sdk.dll'
+  sdk_path: "wcfsdk/sdk.dll"
+  debug: true
+  port: 10086
