@@ -19,4 +19,4 @@ package = true
 [project.scripts]
 wcferry-agent = "wcferry_agent:main"
 wcferry-mcp-server = "wcferry_mcp_server:main"
-wcferry-message-handler = "wcferry_message_handler:main"
+wcferry-message-gateway = "wcferry_message_gateway:main"
