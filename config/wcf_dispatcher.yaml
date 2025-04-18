@@ -1,0 +1,7 @@
+logger:
+  level: DEBUG
+  filename: "logs/agent.log"
+
+wcferry_client:
+  host: "127.0.0.1"
+  port: 10086
