@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from common.wcf import WcfClientConfig
+from wcferry_agent.wcf import WcfClientConfig
 from common.logger import LoggerConfig
 from typing import List
 

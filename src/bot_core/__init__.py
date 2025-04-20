@@ -2,7 +2,7 @@ from wcferry import Wcf, WxMsg
 from queue import Empty
 from pprint import pprint
 from common.config import load_config_from_args
-from common.wcf import WcfClient
+from wcferry_agent.wcf import WcfClient
 from .config import WcferryMessageHandlerConfig
 
 
